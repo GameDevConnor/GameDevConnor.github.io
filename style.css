@@ -115,7 +115,7 @@ nav ul li a:hover:after {
     transition: width 0.5s ease;
 }
 
-.tab-links.active::after {
+.tab-links.active-link::after {
     width: 50%;
 }
 
@@ -127,4 +127,17 @@ nav ul li a:hover:after {
 .tab-contents ul li span {
     color: #4FF8BD;
     font-size: x-large;
+}
+
+.tab-contents ul li span.date {
+    color: coral;
+    font-size: larger;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
 }

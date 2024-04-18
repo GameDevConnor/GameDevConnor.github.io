@@ -48,11 +48,11 @@
                 <p>My name is Connor-Francis McGrath. I am a software developer and aspiring game developer based in Toronto.
                 </p>
                 <div class="tab-titles">
-                    <p class="tab-links active">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li>
                             <span>
@@ -147,6 +147,67 @@
                         </li>
                     </ul>
                 </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <span>
+                                Software Engineer Intern, TD Bank
+                            </span> <br>
+                            <br>
+                            <span class="date">January 2023 - April 2023</span>
+                            <br>
+                            <br>
+                            - Coordinated the set up of an Apache HTTP proxy server to route traffic to TD’s internal network with DevOps. Our
+                            team provided information such as IP addresses while DevOps: installed the apache server, opened the firewall ports,
+                            migrated the routing table, confirmed the certificates, and installed the latest version of Linux on the machines.
+                            <br><br>- Translated ETL scripts into Java on the Customer Relationship Management team
+                            <br>
+                        </li>
+                        <br>
+                        <li>
+                            <span>
+                                Software Quality Intern, TD Bank
+                            </span> <br>
+                            <br>
+                            <span class="date">September 2023 - January 2023</span>
+                            <br>
+                            <br>
+                            - Used LoadRunner and Apache JMeter in conjunction with an in house tool to run load tests (peak, soak, and break tests)
+                            on web pages in order to make sure that they were performing at a certain number of transactions per second. Then
+                            wrote reports on the performance of web pages for each iteration.
+                            <br><br>- Programmed scripts with Selenium to automate web page flow in order to make sure TD web pages were functioning.
+                            <br>
+                        </li>
+                        <br>
+                        <li>
+                            <span>
+                                Lassonde School of Engineering
+                            </span> <br>
+                            <br>
+                            <span class="date">May - September 2022</span>
+                            <br>
+                            <br>
+                            - Provided administrative and logistical support for events and activities at York University.
+                            <br><br>- Researched, organized, and hosted several interviews with engineers in the community.
+                            <br><br>- Created promotional material for the students at the university
+                            <br>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <span>
+                                York University
+                            </span> <br>
+                            <br>
+                            <span class="date">2019 - 2024</span>
+                            <br>
+                            Bachelor of Science. Computer Science
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 </div>
@@ -154,10 +215,22 @@
 
 
 
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
 
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
 </body>
-
-
-
-
 </html>
