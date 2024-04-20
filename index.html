@@ -216,8 +216,8 @@
 
 <!-- Portfolio -->
 <div id="portfolio">
-    <h1>Portfolio</h1>
-        <div class="work-list">
+     <h1>Portfolio</h1>
+        <!-- <div class="work-list">
             <div class="work">
                 <img src="images/Screenshot (160).png">
             </div>
@@ -230,11 +230,75 @@
             <div class="work">
                 <img src="images/florence_canny.png">
             </div>
-        </div>
+        </div> -->
+
+       
+            <div class="rowP">
+                 <div class="col1P">
+                    <div class="tab-titlesP">
+                        <p class="tab-linksP active-linkP" onclick="opentabPortfolio('fps', 'fpsContent')">Unity3D FPS Game</p>
+                        <p class="tab-linksP" onclick="opentabPortfolio('website', 'websiteContent')">E-Commerce Website Project</p>
+                        <p class="tab-linksP" onclick="opentabPortfolio('android', 'androidContent')">SwipeNotes</p>
+                        <p class="tab-linksP" onclick="opentabPortfolio('canny', 'cannyContent')">Canny Edge Detection</p>
+                        <p class="tab-linksP" onclick="opentabPortfolio('animation', 'animationContent')">"A Brighter Future" Animation</p>
+                    </div>
+                </div>
+                <div class="col2P">
+
+                    <div class="tab-imgP active-imgP" id="fps">
+                        <iframe src="https://drive.google.com/file/d/1mgg5krWBgd7g9LF68NIuy2xTRvtW7pXS/preview" width="640" height="480" allow="autoplay"></iframe>         
+                    </div>
+                    <div class="tab-imgP" id="website">
+                        <img src="images/Screenshot_18-4-2024_201841_localhost.jpeg" width="600" height="418">     
+                    </div>
+                    <div class="tab-imgP" id="android">
+                        <img src="images/Screenshot_18-4-2024_20133_docs.google.com.jpeg" width="430" height="418">     
+                    </div>
+                    <div class="tab-imgP" id="canny">
+                        <img src="images/florence_original.jpg" width="430" height="418">
+                        <img src="images/florence_canny.png">          
+                    </div>
+                    <div class="tab-imgP" id="animation">
+                        <iframe src="https://drive.google.com/file/d/1ObzW3IfIEkOAePurFuAqUCnIMCiTGjEc/preview" width="640" height="480" allow="autoplay"></iframe>   
+                    </div>
+                </div>
+
+                <div class="col3P">
+                    <br><br>
+                    <div class="tab-contentsP active-contentP" id="fpsContent">
+                        <p>A first person shooter game in Unity3D that uses a state design pattern to control the character and implements physics
+                            based controls and gameplay. Enemy AI also uses a state design pattern, as well as Unity’s NavMesh system.
+                            Programmed in C#. Code and demo video available on the Github. All programming was done individually.</p>          
+                    </div>
+                    <div class="tab-contentsP" id="websiteContent">
+                        <p>An e-commerce website that runs on localhost Apache Tomcat Server 9. Built with HTML, CSS, JavaScript, AJAX, and
+                            JSP for the frontend. Java Servlets and Classes for the backend and business logic. MySQL for data persistence. Code
+                            available on Github under 4413Project. My role was implementing the backend as well as the SQL, additionally assisted
+                            with the front end AJAX.</p>
+                    </div>
+                    <div class="tab-contentsP" id="androidContent">
+                        <p>An Android app built with SDK 34 in Java with Android Studio. A note taking application that uses a
+                            SimpleOnGestureListenter to implement text formatting, bold and italicizing text, with on-screen gestures. Used Realm
+                            Database to save the notes. Code and user study available on Github. My role was implementing the frontend, note
+                            creation functionality, as well as the database.</p>
+                    </div>
+                    <div class="tab-contentsP" id="cannyContent">
+                        <p>Individually implemented a Canny Edge Detection Program in Python using matplotlib, numpy, PyTorch, and kornia.
+                            Code available on Github</p>
+                    </div>
+                    <div class="tab-contentsP" id="animationContent">
+                        <p>A 20 second 3D animated film made in Autodesk Maya. Character was rigged and weight painted by myself. Animation
+                            was done myself using IK handles. Available to view on the Github</p>
+                    </div>
+                </div>
+            </div>
+    
 </div>
 
 
 <script>
+
+
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     
@@ -249,6 +313,30 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
 
+    }
+
+    var tablinksP = document.getElementsByClassName("tab-linksP");
+    var tabimagesP = document.getElementsByClassName("tab-imgP");
+    var tabcontentsP = document.getElementsByClassName("tab-contentsP");
+    function opentabPortfolio(tabname, tabcontent) {
+
+        console.log(document.getElementById(tabcontent));
+
+        for (tablink of tablinksP) {
+            tablink.classList.remove("active-linkP");
+        }
+        for (tabimg of tabimagesP) {
+            tabimg.classList.remove("active-imgP");
+        }
+        for (content of tabcontentsP) {
+            content.classList.remove("active-contentP");
+        }
+
+        event.currentTarget.classList.add("active-linkP");
+
+        document.getElementById(tabname).classList.add("active-imgP");
+
+        document.getElementById(tabcontent).classList.add("active-contentP");
     }
 </script>
 </body>

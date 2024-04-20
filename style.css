@@ -147,10 +147,10 @@ html {
 }
 /* Portfolio */
 #portfolio {
-    padding: 50px 200px;
+    padding: 50px 100px;
 }
 
-.work-list {
+/* .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
@@ -167,4 +167,52 @@ html {
     width: 100px;
     border-radius: 10px;
     display: block;
+} */
+
+.tab-titlesP {
+    /* display: flex; */
+    margin: 20px 0 40px;
+}
+.tab-linksP {
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tab-linksP::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #4FF8BD;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s ease;
+}
+
+.tab-contentsP {
+    display: none;
+}
+
+.tab-contentsP.active-contentP {
+    display: block;
+}
+
+.tab-imgP {
+    display: none;
+}
+.tab-imgP.active-imgP {
+    display: block;
+}
+
+.rowP {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col3P.active-contentP p {
+    color: aquamarine;
 }
