@@ -181,6 +181,10 @@ html {
     font-weight: 500;
 }
 
+.tab-linksP.active-linkP {
+    color: coral;
+}
+
 .tab-linksP::after {
     content: '';
     width: 0;
