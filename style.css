@@ -12,7 +12,7 @@ body {
 #header {
     width: 50%;
     height: 100vh;
-    background-image: url(images/IMG_7032.JPG);
+    background-image: url(images/IMG_8407.JPG);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -56,9 +56,13 @@ nav ul li a:hover:after {
     width: 100%;
 }
 
-/* .header-text {
-    
-} */
+.header-text {
+    font-size: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    text-decoration: underline;
+    /* padding: 10px 120%; */
+}
 
 #about {
     padding: 80px 0%;
@@ -219,4 +223,8 @@ html {
 
 .col3P.active-contentP p {
     color: aquamarine;
+}
+
+.downloadable {
+    padding-left: 40%;
 }
